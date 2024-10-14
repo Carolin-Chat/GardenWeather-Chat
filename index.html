@@ -6,37 +6,60 @@
     <title>GardenWeather Assistant</title>
     <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
     <style>
-        body {
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
             font-family: Arial, sans-serif;
-            line-height: 1.6;
+            font-size: 14px;
+            line-height: 1.4;
             color: #333;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
             max-width: 800px;
             margin: 0 auto;
-            padding: 20px;
         }
         header {
             background-color: #4CAF50;
             color: white;
             text-align: center;
-            padding: 1rem;
-            margin-bottom: 20px;
+            padding: 0.5rem;
+        }
+        h1 {
+            margin: 0;
+            font-size: 1.5em;
         }
         main {
+            display: flex;
+            flex: 1;
             background-color: #f4f4f4;
-            padding: 20px;
-            border-radius: 5px;
+            padding: 1rem;
+        }
+        .content {
+            flex: 1;
+            padding-right: 1rem;
         }
         .main-image {
-            max-width: 100%;
+            width: 300px;
             height: auto;
-            display: block;
-            margin: 20px auto;
+            object-fit: cover;
+        }
+        h2 {
+            margin-top: 0;
+            font-size: 1.2em;
+        }
+        ul {
+            padding-left: 20px;
+            margin: 0.5em 0;
         }
         footer {
             text-align: center;
-            margin-top: 20px;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             color: #777;
+            padding: 0.5rem;
         }
         df-messenger {
             z-index: 999;
@@ -47,27 +70,32 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to the GardenWeather Assistant</h1>
-    </header>
-    
-    <main>
-        <h2>About This Site</h2>
-        <p>This is the home of the GardenWeather Assistant, an AI-powered chatbot to help with your gardening and weather-related questions. Feel free to explore and chat with our AI assistant!</p>
+    <div class="container">
+        <header>
+            <h1>Welcome to the GardenWeather Assistant</h1>
+        </header>
         
-        <img src="https://i.imgur.com/qdgJ6Pk.png" alt="GardenWeather Image" class="main-image">
+        <main>
+            <div class="content">
+                <h2>About This Site</h2>
+                <p>This is the home of the GardenWeather Assistant, an AI-powered chatbot to help with your gardening and weather-related questions.(MVP)</p>
+                
+                <h2>Features</h2>
+                <ul>
+                    <li>Integrated Dialogflow chatbot</li>
+                    <li>Responsive layout</li>
+                    <li> Weather and Gardening information (only demo dates) </li>
+                </ul>
+            </div>
+            
+            <img src="https://i.imgur.com/qdgJ6Pk.png" alt="GardenWeather Image" class="main-image">
+        </main>
         
-        <h2>Features</h2>
-        <ul>
-            <li>Integrated Dialogflow chatbot</li>
-            <li>Responsive layout</li>
-            <li>Gardening and weather information (demo dates)</li>
-        </ul>
-    </main>
+        <footer>
+            <p>&copy; 2024 Carolin Metzner. Powered by GitHub Pages and Dialogflow.</p>
+        </footer>
+    </div>
     
-    <footer>
-        <p>&copy; 2024 Carolin Metzner. Powered by GitHub Pages and Dialogflow.</p>
-    </footer>
     <df-messenger
       intent="WELCOME"
       chat-title="GardenWeather"
