@@ -3,9 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Pages Site with Dialogflow Messenger</title>
+    <title>GardenWeather Assistant</title>
     <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-bottom: 20px;
+        }
+        main {
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #777;
+        }
         df-messenger {
             z-index: 999;
             position: fixed;
@@ -16,17 +42,25 @@
 </head>
 <body>
     <header>
-        <h1>Welcome to My Website</h1>
+        <h1>Welcome to the GardenWeather Assistant</h1>
     </header>
     
     <main>
-        <p>This is where your main content will go.</p>
+        <h2>About This Site</h2>
+        <p>This is the home of the GardenWeather Assistant, an AI-powered chatbot to help with your gardening and weather-related questions. Feel free to explore and chat with our AI assistant!</p>
+        
+        <h2>Features</h2>
+        <ul>
+            <li>Custom design with CSS</li>
+            <li>Integrated Dialogflow chatbot</li>
+            <li>Responsive layout</li>
+            <li>Gardening and weather information</li>
+        </ul>
     </main>
     
     <footer>
-        <p>&copy; 2024 Your Name</p>
+        <p>&copy; 2024 Your Name. Powered by GitHub Pages and Dialogflow.</p>
     </footer>
-
     <df-messenger
       intent="WELCOME"
       chat-title="GardenWeather"
