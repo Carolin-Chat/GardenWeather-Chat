@@ -26,6 +26,12 @@
             padding: 20px;
             border-radius: 5px;
         }
+        .main-image {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+        }
         footer {
             text-align: center;
             margin-top: 20px;
@@ -49,17 +55,18 @@
         <h2>About This Site</h2>
         <p>This is the home of the GardenWeather Assistant, an AI-powered chatbot to help with your gardening and weather-related questions. Feel free to explore and chat with our AI assistant!</p>
         
+        <img src="https://i.imgur.com/qdgJ6Pk.png" alt="GardenWeather Image" class="main-image">
+        
         <h2>Features</h2>
         <ul>
-            <li>Custom design with CSS</li>
             <li>Integrated Dialogflow chatbot</li>
             <li>Responsive layout</li>
-            <li>Gardening and weather information</li>
+            <li>Gardening and weather information (demo dates)</li>
         </ul>
     </main>
     
     <footer>
-        <p>&copy; 2024 Your Name. Powered by GitHub Pages and Dialogflow.</p>
+        <p>&copy; 2024 Carolin Metzner. Powered by GitHub Pages and Dialogflow.</p>
     </footer>
     <df-messenger
       intent="WELCOME"
